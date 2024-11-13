@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:saveEnabled="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PracticalTest01MainActivity">
+
+
+    <!-- Button pentru navigare către activitatea secundară -->
+    <Button
+        android:id="@+id/navigate_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="NAVIGATE TO SECONDARY ACTIVITY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <!-- TextView pentru afișarea numărului de apăsări din stânga -->
+    <TextView
+        android:id="@+id/left_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/navigate_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/right_text_view"
+        app:layout_constraintWidth_default="spread"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+    <!-- TextView pentru afișarea numărului de apăsări din dreapta -->
+    <TextView
+        android:id="@+id/right_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/navigate_button"
+        app:layout_constraintStart_toEndOf="@+id/left_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_default="spread"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+    <!-- Buton pentru incrementarea valorii din stânga -->
+    <Button
+        android:id="@+id/left_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRESS ME!"
+        app:layout_constraintTop_toBottomOf="@id/left_text_view"
+        app:layout_constraintStart_toStartOf="@id/left_text_view"
+        app:layout_constraintEnd_toEndOf="@id/left_text_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3"/>
+
+    <!-- Buton pentru incrementarea valorii din dreapta -->
+    <Button
+        android:id="@+id/right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRESS ME, TOO!"
+        app:layout_constraintTop_toBottomOf="@id/right_text_view"
+        app:layout_constraintStart_toStartOf="@id/right_text_view"
+        app:layout_constraintEnd_toEndOf="@id/right_text_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
